@@ -1,10 +1,7 @@
+import { strict as assert } from "node:assert";
 import capitalize from "../src/capitalize.js";
 
-if (capitalize('hexlet') !== 'Hexlet') {
-  throw new Error('error');
-}
-if (capitalize('') !== '') {
-  throw new Error('error');
-}
+assert.equal(capitalize('hexlet'), 'Hexlet');
+assert.equal(capitalize(''), '');
 
 console.log('All tests are passed');
